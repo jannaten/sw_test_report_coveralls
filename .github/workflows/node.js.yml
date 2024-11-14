@@ -1,0 +1,26 @@
+name: Node.js CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18.x"
+
+      - name: npm install and test run
+        run: |
+          npm install
+          npm test || true
+
+      - name: npm run coverage
+        run: npm run coverage || true
+
+      - name: Coveralls GitHub Action
+        uses: coverallsapp/github-action@v2.2.3

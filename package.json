@@ -5,10 +5,44 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no tests are implemented yet \" && exit 1"
+    "test": "mocha",
+    "report": "mocha --reporter mochawesome",
+    "coverage": "c8 npm run test"
   },
-  "author": "",
+  "author": "Jananten&Juhana",
   "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {}
+  "c8": {
+    "include": [
+      "src/filter.js",
+      "src/reduce.js",
+      "src/toNumber.js",
+      "src/isObject.js",
+      "src/isEmpty.js",
+      "src/get.js",
+      "src/toString.js",
+      "src/capitalize.js",
+      "src/isArrayLike.js",
+      "src/words.js"
+    ],
+    "exclude": [
+      "node_modules/**",
+      "test/**"
+    ],
+    "reporter": [
+      "text",
+      "lcov"
+    ]
+  },
+  "devDependencies": {
+    "c8": "^8.0.1",
+    "chai": "^4.3.10",
+    "coveralls": "^3.1.1",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3",
+    "sinon": "^17.0.1",
+    "sinon-chai": "^3.7.0"
+  },
+  "dependencies": {
+    "uuid": "^11.0.3"
+  }
 }
