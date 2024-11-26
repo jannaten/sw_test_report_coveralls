@@ -24,3 +24,9 @@ jobs:
 
       - name: Coveralls GitHub Action
         uses: coverallsapp/github-action@v2.2.3
+
+      - name: Upload Mocha Awesome test report
+        uses: actions/upload-artifact@v3
+        with:
+          name: mocha-awesome-report
+          path: mochawesome-report/mochawesome.html
