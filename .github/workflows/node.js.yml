@@ -17,7 +17,7 @@ jobs:
       - name: npm install and test run
         run: |
           npm install
-          npm test || true
+          npm report || true
 
       - name: npm run coverage
         run: npm run coverage || true

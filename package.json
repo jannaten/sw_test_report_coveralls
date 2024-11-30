@@ -5,10 +5,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "mocha --reporter mochawesome",
+    "test": "mocha",
     "scenarios": "mocha \"./test/scenarios/*.js\"",
     "report": "mocha --reporter mochawesome",
-    "coverage": "c8 npm run test"
+    "coverage": "c8 npm run test",
+    "all": "npm run report && npm run scenarios && npm run coverage"
   },
   "author": "Jananten&Juhana",
   "license": "MIT",
@@ -44,6 +45,7 @@
     "sinon-chai": "^3.7.0"
   },
   "dependencies": {
+    "software-testing-assignment": "file:",
     "uuid": "^11.0.3"
   }
 }
