@@ -9,7 +9,7 @@
     "scenarios": "mocha \"./test/scenarios/*.js\"",
     "report": "mocha --reporter mochawesome",
     "coverage": "c8 npm run test",
-    "all": "npm run report && npm run scenarios && npm run coverage"
+    "allUnit": "c8 mocha --reporter mochawesome"
   },
   "author": "Jananten&Juhana",
   "license": "MIT",
