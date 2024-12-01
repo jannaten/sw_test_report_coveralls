@@ -1,13 +1,5 @@
-# Student template
-
-## Purpose of this repository
-
-This is a project template for students participating in Software Testing course
-at Tampere University.
-
-The repository only contains the source code that is under testing, `package.json` skeleton
-and LICENSE file.
-
-Source code folder contains a separate license file that must **NOT** be removed under any circumstances!
-Removing this license file directly violates terms and conditions of the software under testing.
-Individuals who remove or modify the license file will also carry the consequences.
+# Dependencies
+1. Node.js version 20 or higher (node -v)
+2. npm version 6 or higher (npm -v)<br>
+<br>If these versions are missing or not modern enough, npm Docs have instructions to install new ones:
+https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
