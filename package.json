@@ -7,9 +7,9 @@
   "scripts": {
     "test": "mocha",
     "scenarios": "mocha \"./test/scenarios/*.js\"",
-    "report": "mocha --reporter mochawesome",
-    "coverage": "c8 npm run test",
-    "allUnit": "c8 mocha --reporter mochawesome"
+    "report": "mocha 'test/**/*.js' --reporter mochawesome",
+    "coverage": "c8 mocha 'test/**/*.js'",
+    "all": "c8 mocha 'test/**/*.js' --reporter mochawesome"
   },
   "author": "Jananten&Juhana",
   "license": "MIT",
